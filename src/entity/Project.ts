@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm'
-import { Locales } from './Locales'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Locale } from './Locale'
+import { Translation } from './Translation'
 
 @Entity()
 export class Project {
@@ -9,12 +10,9 @@ export class Project {
   @Column()
   name: string
 
-  @Column()
-  path: string
+  @OneToMany(type => Locale, locale => locale.id)
+  locales: Locale[]
 
-  @Column()
-  format: string
-
-  @OneToMany(type => Locales, locale => locale)
-  locales: string
+  // @OneToMany(type => Translation, translation => translation.id)
+  // translations: Translation[]
 }
