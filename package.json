@@ -23,7 +23,7 @@
     "deepmerge": "^4.2.2",
     "electron-promise-ipc": "^2.0.0",
     "element-ui": "^2.4.5",
-    "flat": "^5.0.0",
+    "flat": "^5.0.1",
     "pouchdb": "^7.1.1",
     "reflect-metadata": "^0.1.13",
     "register-service-worker": "^1.6.2",
